@@ -1,0 +1,22 @@
+// 
+// Decompiled by Procyon v0.5.30
+// 
+
+package com.jetbrains.cidr.execution.debugger.backend.lldb.auto_generated;
+
+import com.google.protobuf.MessageOrBuilder;
+
+public interface ProcessInterrupted_BroadcastOrBuilder extends MessageOrBuilder
+{
+    boolean hasThread();
+    
+    Model.LLDBThread getThread();
+    
+    Model.LLDBThreadOrBuilder getThreadOrBuilder();
+    
+    boolean hasFrame();
+    
+    Model.LLDBFrame getFrame();
+    
+    Model.LLDBFrameOrBuilder getFrameOrBuilder();
+}
