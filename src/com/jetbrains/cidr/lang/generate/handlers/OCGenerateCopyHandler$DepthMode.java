@@ -1,0 +1,11 @@
+// 
+// Decompiled by Procyon v0.5.30
+// 
+
+package com.jetbrains.cidr.lang.generate.handlers;
+
+protected enum DepthMode
+{
+    DEEP, 
+    SHALLOW;
+}

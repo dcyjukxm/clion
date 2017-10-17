@@ -1,0 +1,10 @@
+// 
+// Decompiled by Procyon v0.5.30
+// 
+
+package com.jetbrains.cidr.lang.settings;
+
+import java.lang.annotation.Annotation;
+
+public @interface NewLineConstant {
+}

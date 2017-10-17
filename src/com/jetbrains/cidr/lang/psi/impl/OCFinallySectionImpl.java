@@ -1,0 +1,44 @@
+// 
+// Decompiled by Procyon v0.5.30
+// 
+
+package com.jetbrains.cidr.lang.psi.impl;
+
+import com.jetbrains.cidr.lang.psi.visitors.OCVisitor;
+import com.jetbrains.cidr.lang.parser.OCElementTypes;
+import com.jetbrains.cidr.lang.psi.OCBlockStatement;
+import org.jetbrains.annotations.NotNull;
+import com.intellij.lang.ASTNode;
+import com.jetbrains.cidr.lang.psi.OCFinallySection;
+
+public class OCFinallySectionImpl extends OCElementBase implements OCFinallySection
+{
+    public OCFinallySectionImpl(@NotNull final ASTNode astNode) {
+        if (astNode == null) {
+            throw new IllegalArgumentException(String.format("Argument for @NotNull parameter '%s' of %s.%s must not be null", "node", "com/jetbrains/cidr/lang/psi/impl/OCFinallySectionImpl", "<init>"));
+        }
+        super(astNode);
+    }
+    
+    @Override
+    public OCBlockStatement getBody() {
+        return this.findChildByType(OCElementTypes.BLOCK_STATEMENTS);
+    }
+    
+    @Override
+    public void accept(@NotNull final OCVisitor ocVisitor) {
+        try {
+            if (ocVisitor == null) {
+                throw new IllegalArgumentException(String.format("Argument for @NotNull parameter '%s' of %s.%s must not be null", "visitor", "com/jetbrains/cidr/lang/psi/impl/OCFinallySectionImpl", "accept"));
+            }
+        }
+        catch (IllegalArgumentException ex) {
+            throw a(ex);
+        }
+        ocVisitor.visitFinallySection(this);
+    }
+    
+    private static IllegalArgumentException a(final IllegalArgumentException ex) {
+        return ex;
+    }
+}
